@@ -17,6 +17,16 @@ public struct LinkedList<Value> {
       tail = head
     }
   }
+  
+  public mutating func append(_ value: Value) {
+    guard !isEmpty else {
+      push(value)
+      return
+    }
+    
+    tail!.next = Node(value: value)
+    tail = tail!.next
+  }
 }
 
 extension LinkedList: CustomStringConvertible {

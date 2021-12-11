@@ -19,3 +19,12 @@ example(of: "push") {
   
   print(list)
 }
+
+example(of: "append") {
+  var list = LinkedList<Int>()
+  list.append(1)
+  list.append(2)
+  list.append(3)
+  
+  print(list)
+}
